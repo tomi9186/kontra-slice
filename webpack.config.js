@@ -15,14 +15,14 @@ module.exports = {
   },
   output: {
     filename: 'js/[name].js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'docs'),
     clean: true,
     assetModuleFilename: 'assets/[name][ext][query]',
   },
   devtool: isProd ? false : 'source-map',
   devServer: {
     static: {
-      directory: path.join(__dirname, 'dist'),
+      directory: path.join(__dirname, 'docs'),
     },
     open: true,
     hot: true,

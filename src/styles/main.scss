@@ -1,19 +1,14 @@
-// Main SCSS entry point
+// src/styles/main.scss
 
-// Bootstrap (overrides moraju biti prvi)
-@import "./bootstrap/bootstrap-overrides";
+// Bootstrap
 @import "./bootstrap/bootstrap";
 
-// Base
+// Base styles (varijable, mixini)
 @import "./base/variables";
 @import "./base/mixins";
 
-// Layout
-@import "./layout/header";
-@import "./layout/footer";
-@import "./layout/offcanvas";
+// Komponente
+@import "./components/navbar";
 
-// Components
-@import "./components/button";
-@import "./components/card";
-@import "./components/modal";
+// Layout
+@import "./layout/style";

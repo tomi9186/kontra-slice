@@ -1,0 +1,23 @@
+// src/styles/layout/style.scss
+
+a {
+    color: $primary-text;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+  background: #ffffff;
+  color: $primary-text;
+
+  // Background slika vidljiva samo na md breakpoint i većim ekranima
+  @media (min-width: 768px) {
+    background-image: url('../img/body-bg.svg');
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

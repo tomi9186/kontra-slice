@@ -45,7 +45,10 @@ module.exports = {
               sourceMap: !isProd,
               sassOptions: {
                 quietDeps: true,
+                loadPaths: ['node_modules'],
               },
+              warnRuleAsWarning: false,
+              implementation: require('sass'),
             },
           },
         ],
@@ -111,5 +114,11 @@ module.exports = {
           }),
         ]
       : []),
+  ],
+  ignoreWarnings: [
+    {
+      module: /sass-loader/,   // ignorira warning iz sass-loadera
+      message: /@import rules are deprecated/,
+    },
   ],
 };
